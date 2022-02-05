@@ -1,4 +1,6 @@
-# You can change the grid according to the puzzle (a sample grid is given)
+# Coding and explanation by Taaroop
+
+# You can change the grid according to the puzzle (a sample grid is given).
 
 grid = [
         [8, 0, 7, 0, 0, 9, 6, 0, 5],
@@ -17,8 +19,7 @@ def print_grid():
     for li in grid:
         print(li)
 
-# This function determines whether a number (1 to 9) can be placed at a certain position in the grid
-# by checking its uniqueness in its respective row, column, and box
+# This function determines whether a number (1 to 9) can be placed at a certain position in the grid by checking its uniqueness in its respective row, column, and box.
 
 def is_possible(y, x, num):
     global grid
@@ -37,7 +38,7 @@ def is_possible(y, x, num):
     else:
         return False
 
-# The final solve function (it uses recursion and backtracking)
+# The final solve function (it uses recursion and backtracking).
 
 def solve():
     global grid
@@ -56,5 +57,5 @@ def solve():
     print("")
     input() # It enter key is pressed, the program continues the recursion and searches for more solutions until all possible combinations has been tried.
 
-# Solving the puzzle
+# Solving the puzzle.
 solve()
