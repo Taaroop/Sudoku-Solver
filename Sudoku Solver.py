@@ -1,4 +1,4 @@
-# You can change the grid according to the puzzle (2 sample grids are given)
+# You can change the grid according to the puzzle (a sample grid is given)
 
 grid = [
         [8, 0, 7, 0, 0, 9, 6, 0, 5],
@@ -10,11 +10,6 @@ grid = [
         [0, 1, 9, 0, 0, 4, 7, 6, 0],
         [0, 0, 4, 0, 7, 0, 3, 0, 0],
         [7, 0, 2, 8, 0, 0, 4, 0, 1]
-        ]
-
-grid2 = [
-        [8, 0, 0, 0, 0, 0, 1, 0, 2],
-        []
         ]
 
 def print_grid():
@@ -53,13 +48,13 @@ def solve():
                     if is_possible(y, x, num) == True:
                         grid[y][x] = num
                         solve() # Resursion
-                        grid[y][x] = 0 # Backtracking (because the fuction coming to this line intead to going to line <61> means that choosing this particular value caused us to reach at a dead end)
-
+                        grid[y][x] = 0 # Backtracking (because the fuction coming to this line intead to going to line <55> means that choosing this particular value caused us to reach at a dead end, i.e. no values for a particular blank cell works)
+                        
                 return
     
     print_grid() # The only way of coming here is if our grid is filled. So, a solution has been found and thus it gets printed.
     print("")
     input() # It enter key is pressed, the program continues the recursion and searches for more solutions until all possible combinations has been tried.
 
-# Solve
+# Solving the puzzle
 solve()
