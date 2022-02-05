@@ -48,7 +48,7 @@ def solve():
                     if is_possible(y, x, num) == True:
                         grid[y][x] = num
                         solve() # Resursion
-                        grid[y][x] = 0 # Backtracking (because the fuction coming to this line intead to going to line <55> means that choosing this particular value caused us to reach at a dead end, i.e. no values for a particular blank cell works)
+                        grid[y][x] = 0 # Backtracking (because the fuction coming to this line intead to going to line <55> through the 'return' in line <53> means that choosing this particular value caused us to reach at a dead end, i.e. no values for a particular blank cell works)
                         
                 return
     
